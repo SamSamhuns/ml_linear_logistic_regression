@@ -9,15 +9,29 @@ __Custom implementation of the univariate linear regression, linear logistic reg
 <img src='img/ex1data1.png' height='380' />
 
 #### Hypothesis function
+    Here, x<sub>0</sub> is always assumed to be 1
 <img src='img/eq01.svg' height='20' /><br/>
+
+    Vectorized hypothesis
 <img src='img/eq02.svg' height='20' />
 
-#### Loss/Cost function
+#### Mean Squared Error Loss function
+    Also known as the MSE cost function.
+    The 1/2 constant term is used to make sure the derivative smoothly cancels out the 2 term.
+    Adding any constants will not affect the final minimized value of the parameters.
 <img src='img/eq03.svg' height='25' /><br/>
+
+    Vectorized MSE Loss
 <img src='img/eq04.svg' height='25' />
 
 #### Gradient descent
+
+    The alpha term is the learning rate of the gradient descent.
+    A larger alpha means larger steps at each gradient descent update but may lead to a divergence of the MSE loss.
+    A very small alpha means the convergence will be inefficiently slow.
 <img src='img/eq05.svg' height='25' /><br/>
+
+    Vectorized gradient descent
 <img src='img/eq06.svg' height='25' />
 
 #### Loss curve and final best fit line with Gradient descent
@@ -39,8 +53,12 @@ The final best fit line after the normal equations method.<br/>
 ![](img/ex1data21.png)  |  ![](img/ex1data22.png)
 
 #### Hypothesis function
+
+    The hypothesis function for normal linear regression is run through a non-linear function, g(z), the sigmoid function.
 <img src='img/eq07.svg' height='20'/>
 <img src='img/eq08.png' height='20'/>
+
+    The sigmoid/logistic function.
 <img src='img/eq09.svg' height='25'/>
 
 #### Loss/Cost function
