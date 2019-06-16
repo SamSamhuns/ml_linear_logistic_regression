@@ -9,13 +9,16 @@ __Custom implementation of the univariate linear regression, linear logistic reg
 <img src='img/ex1data1.png' height='380' />
 
 #### Hypothesis function
-<img src='img/' />
+<img src='img/eq01.svg' /><br/>
+<img src='img/eq02.svg' />
 
 #### Loss/Cost function
-<img src='img/' />
+<img src='img/eq03.svg' /><br/>
+<img src='img/eq04.svg' />
 
 #### Gradient descent
-<img src='img/' />
+<img src='img/eq05.svg' /><br/>
+<img src='img/eq06.svg' />
 
 #### Loss curve and final best fit line with Gradient descent
 Loss curve plotted along with the final best fit line after running 10<sup>3</sup> iterations of the Gradient descent update equations.
@@ -90,7 +93,7 @@ Here we use a polynomial function <img src='img/' /> to model our data.
 <img src='img/' />
 
 #### Loss curve and final boundary line using a polynomial function with regularization.
-Here we use a polynomial function <img src='img/' /> to model our data. 
+Here we use a polynomial function <img src='img/' /> to model our data.
 
 <img src='img/data2_regularized_logistic_regression_loss_contour_plot.png' height='380' />
 
