@@ -53,7 +53,7 @@ The final best fit line after the normal equations method.<br/>
 <img src='img/eq14.svg' height='25'/>
 
 #### Loss curve and final boundary line using a linear function.
-Here we use a linear function <img src='img/eq08.png' height='20'/> to model our data. This is why our boundary line is a straight line which fits the data pretty well but we can clearly see that a polynomial model can fit the data better.
+Here we use a linear function <img src='img/eq08.png' height='17'/> to model our data. This is why our boundary line is a straight line which fits the data pretty well but we can clearly see that a polynomial model can fit the data better.
 
 <img src='img/data1_logistic_regression_loss_contour_plot.png' height='380' />
 
@@ -87,14 +87,14 @@ Here we use a polynomial hypothesis function <img src='img/eq16.png' height='20'
 <img src='img/eq23.svg' height='25'/>
 
 #### Loss curve and final boundary line using a polynomial function.
-Here we use a polynomial function <img src='img/' /> to model our data.
+Here we use a polynomial function <img src='img/eq16.png' height='20'/> to model our data.
 
 <img src='img/data2_logistic_regression_loss_contour_plot.png' height='380' />
 
 ## Polynomial Logistic Regression with regularization
 
 #### Loss curve and final boundary line using a polynomial function with regularization.
-Here we use a polynomial function <img src='img/eq16.png' /> to model our data.
+Here we use a polynomial function <img src='img/eq16.png' height='20'/> to model our data.
 
 #### Loss function with regularization
 <img src='img/eq24.svg' height='25'/>
