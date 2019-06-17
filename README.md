@@ -61,13 +61,23 @@ The final best fit line after the normal equations method.<br/>
     The sigmoid/logistic function.
 <img src='img/eq09.svg' height='25'/>
 
-#### Loss/Cost function
+#### Cost function
+
+    The loss function is calculated using the log of maximum likelihoodsand is dependent on the true value of y.
 <img src='img/eq10.png' height='48'/>
+
+    When combined, the cost function can be expressed as:
 <img src='img/eq11.svg' height='25'/>
+
+    Vectorized cost function
 <img src='img/eq12.svg' height='25'/>
 
 #### Gradient descent
+
+    The gradient algorithm is the similar to the one for linear regression.
 <img src='img/eq13.svg' height='25'/>
+
+    Vectorized Gradient descent
 <img src='img/eq14.svg' height='25'/>
 
 #### Loss curve and final boundary line using a linear function.
@@ -91,17 +101,23 @@ Here we use a polynomial hypothesis function <img src='img/eq16.png' height='20'
 
 #### Hypothesis function
 <img src='img/eq15.svg' height='20'/>
+
+    The hypothesis function is a polynomial function of the second degree
 <img src='img/eq16.png' height='25'/>
 <img src='img/eq17.svg' height='30'/>
 
-#### Loss/Cost function
-<img src='img/eq18.png' height='48'/>
-<img src='img/eq19.svg' height='25'/>
-<img src='img/eq20.svg' height='20'/>
+#### Cost function
+
+    We use the same cost function for logistic regression with polynomials.
+<img src='img/eq18.png' height='48'/><br/>
+<img src='img/eq20.svg' height='20'/><br/>
+<img src='img/eq19.svg' height='25'/><br/>
 <img src='img/eq21.svg' height='25'/>
 
 #### Gradient descent
-<img src='img/eq22.svg' height='25'/>
+<img src='img/eq22.svg' height='25'/><br/>
+
+    Vectorized Gradient descent
 <img src='img/eq23.svg' height='25'/>
 
 #### Loss curve and final boundary line using a polynomial function.
@@ -114,16 +130,27 @@ Here we use a polynomial function <img src='img/eq16.png' height='20'/> to model
 #### Loss curve and final boundary line using a polynomial function with regularization.
 Here we use a polynomial function <img src='img/eq16.png' height='20'/> to model our data.
 
-#### Loss function with regularization
+#### Cost function with regularization
+
+    The extra term adds regularization to our regression causing our parameters to decrease in magnitude.
+    The constant lambda is the regularization factor. Too large of a lambda might cause underfitting.
 <img src='img/eq24.svg' height='25'/>
+
+    Vectorized Cost function with regularization
 <img src='img/eq25.png' height='35'/>
 
 #### Gradient descent update
+
+    We update the 0th parameter without regularization.
 <img src='img/eq26.svg' height='25'/>
 <img src='img/eq27.svg' height='25'/>
+
+    Vectorized gradient descent is done as usual
 <img src='img/eq28.png' height='35'/>
 
 <img src='img/data2_regularized_logistic_regression_loss_contour_plot.png' height='380' />
+
+__We can observe that the loss for training set has not quite reached the same low levels as for the logistic regression without regularization. However, our model with regularization will be more generalizable with new unseen test examples.__
 
 #### Acknowledgements
 -   Dataset from Andrew Ng Machine Learning Stanford edu MOOC.
