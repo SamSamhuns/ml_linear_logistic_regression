@@ -1,6 +1,6 @@
 # Linear and Logistic regression model implementation
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 __Custom implementation of the univariate linear regression, linear logistic regression and polynomial logistic regression with regularization. Only the python `numpy` library is used along with `matplotlib` for plots in `jupyter notebook`.__
 
