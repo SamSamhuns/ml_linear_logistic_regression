@@ -8,7 +8,7 @@ __Custom implementation of the univariate linear regression, linear logistic reg
 
 ### Visualizing our first dataset.
 
-<img src='img/ex1data1.png' height='380' />
+<img src='img/ex1data1.png' height='300' />
 
 #### Hypothesis function
     Here, x<sub>0</sub> is always assumed to be 1
@@ -85,14 +85,14 @@ The final best fit line after the normal equations method.<br/>
 #### Loss curve and final boundary line using a linear function.
 Here we use a linear function <img src='img/eq08.png' height='17'/> to model our data. This is why our boundary line is a straight line which fits the data pretty well but we can clearly see that a polynomial model can fit the data better.
 
-<img src='img/data1_logistic_regression_loss_contour_plot.png' height='380' />
+<img src='img/data1_logistic_regression_loss_contour_plot.png' height='300' />
 
 ## Polynomial Logistic Regression
 
 #### Loss curve and final boundary line using a polynomial function.
 Here we use a polynomial hypothesis function <img src='img/eq16.png' height='20'/> to model our data. Now our boundary line is a curved line which fits the data much better than the previous linear model.
 
-<img src='img/data1_poly_logistic_regression_loss_contour_plot.png' height='380' />
+<img src='img/data1_poly_logistic_regression_loss_contour_plot.png' height='300' />
 
 
 ### Visualizing our third dataset.
@@ -125,7 +125,7 @@ Here we use a polynomial hypothesis function <img src='img/eq16.png' height='20'
 #### Loss curve and final boundary line using a polynomial function.
 Here we use a polynomial function <img src='img/eq16.png' height='20'/> to model our data.
 
-<img src='img/data2_logistic_regression_loss_contour_plot.png' height='380' />
+<img src='img/data2_logistic_regression_loss_contour_plot.png' height='300' />
 
 ## Polynomial Logistic Regression with regularization
 
@@ -150,7 +150,7 @@ Here we use a polynomial function <img src='img/eq16.png' height='20'/> to model
     Vectorized gradient descent is done as usual
 <img src='img/eq28.png' height='35'/>
 
-<img src='img/data2_regularized_logistic_regression_loss_contour_plot.png' height='380' />
+<img src='img/data2_regularized_logistic_regression_loss_contour_plot.png' height='300' />
 
 __We can observe that the loss for training set has not quite reached the same low levels as for the logistic regression without regularization. However, our model with regularization will be more generalizable with new unseen test examples.__
 
