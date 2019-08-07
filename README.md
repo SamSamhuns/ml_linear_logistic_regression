@@ -191,6 +191,29 @@ Add regularization to the gradient and then update the rest of the parameters.
 
 **We can observe that the loss for training set has not quite reached the same low levels as for the logistic regression without regularization. However, our model with regularization will be more generalizable with new unseen test examples.**
 
+#### Important notes on Scaling
+
+When creating training and testing sets, scaling must be done carefully:
+
+-   The `scaling object` should be *fit* on the `TRAINING` data
+-   The `scaling object` can be used to *transform* the `TRAINING` data now 
+-   The `transformed TRAIN` data can be used to the fit the predictive model
+-   The same `scaling object` should be used to *transform* the `TESTING` data
+-   The predictive model can now bw used on the `transformed TEST` data to make predictions 
+
+Example with `sklearn`:
+
+```python
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler()
+scaler.fit(X_train)
+X_train_scaled = scaler.transform(X_train)
+model.fit(X_train_scaled)
+X_test_scaled = scaler.transform(X_test)
+y_predicted = model.predict(X_test_scaled)
+```
+
 #### Acknowledgements
 
 -   Dataset from Andrew Ng Machine Learning Stanford edu MOOC.
