@@ -139,9 +139,9 @@ Here we use a polynomial hypothesis function <img src='img/eq16.png' height='20'
 
 #### Gradient descent
 
-<img src='img/eq22.svg' height='25'/><br/>
+<img src='img/eq22.png' height='35'/><br/>
 
-    Vectorized Gradient descent
+#### Vectorized Gradient descent
 
 <img src='img/eq23.svg' height='25'/>
 
@@ -172,7 +172,7 @@ Here we use a polynomial function <img src='img/eq16.png' height='20'/> to model
 
     We update the 0th parameter without regularization.
 
-<img src='img/eq26.png' height='35'/>
+<img src='img/eq26.png' height='45'/>
 <img src='img/eq27.svg' height='25'/>
 
     Vectorized gradient descent has to be done in two steps.
@@ -184,7 +184,7 @@ Calculate the gradient without regularization and update the 0<sup>th</sup> bias
 
 Add regularization to the gradient and then update the rest of the parameters.
 
-<img src='img/eq29.png' height='35'/><br/>
+<img src='img/eq29.png' height='45'/><br/>
 <img src='img/eq31.png' height='25'/>
 
 <img src='img/data2_regularized_logistic_regression_loss_contour_plot.png' height='300' />
@@ -196,10 +196,10 @@ Add regularization to the gradient and then update the rest of the parameters.
 When creating training and testing sets, scaling must be done carefully:
 
 -   The `scaling object` should be *fit* on the `TRAINING` data
--   The `scaling object` can be used to *transform* the `TRAINING` data now 
+-   The `scaling object` can be used to *transform* the `TRAINING` data now
 -   The `transformed TRAIN` data can be used to the fit the predictive model
 -   The same `scaling object` should be used to *transform* the `TESTING` data
--   The predictive model can now bw used on the `transformed TEST` data to make predictions 
+-   The predictive model can now bw used on the `transformed TEST` data to make predictions
 
 Example with `sklearn`:
 
