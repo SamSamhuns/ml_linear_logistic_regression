@@ -195,10 +195,10 @@ Add regularization to the gradient and then update the rest of the parameters.
 
 When creating training and testing sets, scaling must be done carefully:
 
--   The `scaling object` should be *fit* on the `TRAINING` data
--   The `scaling object` can be used to *transform* the `TRAINING` data now
+-   The `scaling object` should be _fit_ on the `TRAINING` data
+-   The `scaling object` can be used to _transform_ the `TRAINING` data now
 -   The `transformed TRAIN` data can be used to the fit the predictive model
--   The same `scaling object` should be used to *transform* the `TESTING` data
+-   The same `scaling object` should be used to _transform_ the `TESTING` data
 -   The predictive model can now bw used on the `transformed TEST` data to make predictions
 
 Example with `sklearn`:
@@ -214,6 +214,87 @@ X_test_scaled = scaler.transform(X_test)
 y_predicted = model.predict(X_test_scaled)
 ```
 
-#### Acknowledgements
+# Application of Linear and Logistic Regression on real world datasets
+
+## Setup and Installation
+
+Set up a python virtual env and install all python packages in `requirements.txt` and enable jupyer notebook nbextensions
+
+```shell
+$ pip install -r requirements.txt
+$ pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install
+$ jupyter nbextension enable --py widgetsnbextension
+```
+
+## Linear Regression
+
+### Boston Housing Prices Dataset
+
+We use a classic linear regression model using the closed form or the normal equation solution to train our model. The error is measured with the Mean Squared Error function.
+
+We also use a ridge regression model with k-fold cross validation to report the most optimal parameters for training the model.
+
+**Results summarized**
+
+All regressions run with a KFoldCrossValidator with 10 folds
+
+Linear regression with no regularization (lambda = 0):
+
+-   Average train loss was: `10.899187765195178`
+-   Average test loss was: `11.887818544342881`
+-   R squared for the entire dataset was `0.7402547552453309`
+
+For ridge regression, a lambda of 10 yields the best results quantified by the minimum test error:
+
+-   Average train loss was: `11.56861911239611`
+-   Average test loss was: `14.642007589269346`
+-   R squared for the entire dataset was `0.7308523643988569`
+
+For Polynomial regression with second degree features, a lambda of 10.0 yields the minimum testing error:
+
+-   Average train loss is: `3.569900140898917`
+-   Average test loss is: `8.642765610683222`
+-   R squared for the entire dataset was `0.9159867990609393`
+
+#### Running the notebook
+
+Use jupyter notebook to run `notebooks/linear_regr_boston_housing_dataset.ipynb`
+
+## Logistic Regression
+
+### Wisconsin Breast Cancer Dataset
+
+We use a logistic regression model with log likelihood loss as the optimization function with gradient descent.
+
+The loss visualized on every 100 iteration of the gradient descent
+
+**Results summarized:**
+
+<img src='img/logistic_regr_applied_loss.png' />
+
+-   The accuracy of the model was 0.9736842105263158
+
+-   The precision of the model was  0.9930555555555556
+
+-   The recall of the model was  0.9662162162162162
+
+-   The f1 score of the model was  0.9794520547945206
+
+The confusion matrix from the model:
+
+    			                 Actual values
+    			             Positive(1)   Negative(0)
+    Predicted | Positive(1)     TP 143	  FP 1
+      Values  | Negative(0)     FN 5		TN 79
+
+#### Running the notebook
+
+Use jupyter notebook to run `notebooks/logistic_regr_breast_cancer_wisconsin_dataset.ipynb`
+
+## Acknowledgements and Data Sources
+
+-   Harrison, D. and Rubinfeld, D.L. \`Hedonic prices and the demand for clean air\\', J. Environ. Economics & Management, vol.5, 81-102, 1978.
+
+-   Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
 
 -   Dataset from Andrew Ng Machine Learning Stanford edu MOOC.
